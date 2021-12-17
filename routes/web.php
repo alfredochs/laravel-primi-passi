@@ -17,6 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+//Pagina Principale
 Route::get('/prima-pagina', function () {
     $data = [
         "nome" => "Alfredo",
@@ -30,8 +31,9 @@ Route::get('/prima-pagina', function () {
 
     ];
     return view("prima-pagina", $data);
-});
+})->name("pagina-principale");
 
+//Link
 Route::get('/enlace', function () {
     return view("primo-link");
 })->name('link');
